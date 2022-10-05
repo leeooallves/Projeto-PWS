@@ -1,5 +1,3 @@
-<h1 style="justify-content: center; position: relative; align-items: center; text-align: center;">homepage</h1>
-
 <section>
     <div class="limitesInternos">
         <article style="left: 50%; position: relative; margin-left: -350px;">

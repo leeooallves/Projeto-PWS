@@ -1,5 +1,5 @@
 <?php
-require("conexaoDB.php");
+include "conexaoDB.php";
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 $erro = false;
@@ -8,10 +8,12 @@ $query_login = "SELECT * FROM usuarios WHERE email ='$login' AND senha='$senha'"
 
 $consulta_user = mysqli_query($conexao, $query_login);
 
-if (mysqli_num_rows($consulta) == 1) {
-  echo 'login com sucesso';
+if (mysqli_num_rows($consulta_user) == 1) {
+  session_start();
+  $_SESSION['login'] = true;
+  header('location:../index.php');
 } else {
-  echo 'erro';
+  header('location:index.php?erro=1');
 }
 
 

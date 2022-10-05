@@ -5,11 +5,15 @@ require("view/header.php");
 include "model/conexaoDB.php";
 
 
-//session_start();
-if (isset($_GET['pagina'])) {
-    $pagina = $_GET['pagina'];
+session_start();
+if (isset($_SESSION['login'])) {
+    if (isset($_GET['pagina'])) {
+        $pagina = $_GET['pagina'];
+    } else {
+        $pagina = 'listarFuncionarios';
+    }
 } else {
-    $pagina = 'listarFuncionario';
+    $pagina = 'home';
 }
 
 switch ($pagina) {
