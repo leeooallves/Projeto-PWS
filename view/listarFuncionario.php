@@ -18,6 +18,9 @@
                         while ($linha = mysqli_fetch_array($consulta_funcionarios)) {
                             echo '<tr><td>' . $linha['nome'] . '</td>';
                             echo '<td>' . $linha['sobrenome'] . '</td>';
+                            echo '<td>' . $linha['email'] . '</td>';
+                            echo '<td>' . $linha['telefone'] . '</td>';
+                            echo '<td>' . $linha['cargo'] . '</td>';
                         ?>
                            <td>
                                <!--<a href="deletaTarefa.php?id=<?php echo $linha['id']; ?>">Deletar</a>--!-->

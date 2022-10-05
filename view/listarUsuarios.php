@@ -20,9 +20,12 @@
                         while ($linha = mysqli_fetch_array($consulta_usuarios)) {
                             echo '<tr><td>' . $linha['nome'] . '</td>';
                             echo '<td>' . $linha['sobrenome'] . '</td>';
+                            echo '<td>' . $linha['email'] . '</td>';
+                            echo '<td>' . $linha['telefone'] . '</td>';
+                            echo '<td>' . $linha['cargo'] . '</td>';
                         ?>
                            <td>
-                               <!--<a href="deletaTarefa.php?id=<?php echo $linha['id']; ?>">Deletar</a>--!-->
+                               <a href="../projeto22/model/excluirFuncionario.php" <?php echo $linha['id_usuario']; ?>">Deletar</a>
                            </td>
                            </tr>
                        <?php
