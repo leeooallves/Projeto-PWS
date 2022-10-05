@@ -21,11 +21,8 @@
                 <a class="itemMenu" href="?pagina=listarUsuarios">Usuário</a>
                 <a class="itemMenu" href="?pagina=reportarErro">Reportar Erro</a>
                 <?php if (isset($_SESSION['login'])) { ?>
-                    <a class="itemMenu" href="/control/logout.php">
-                        <?php echo $_SESSION['usuario']; ?>
-                        Sair</a>
+                    <a class="itemMenu" href="../control/logout.php">Sair</a>
                 <?php } ?>
-
 
             </div>
         </div>
