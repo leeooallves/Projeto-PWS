@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Out-2022 às 20:50
+-- Tempo de geração: 06-Out-2022 às 00:28
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -22,15 +22,19 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
--- 
--- Estrutura da database `projeto`
+
+--
+-- Estrutura da tabela `erros`
 --
 
-CREATE DATASE `projeto`;
+CREATE TABLE `erros` (
+  `id_erro` int(11) NOT NULL,
+  `nome` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `telefone` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-USE `projeto`;
-
-
+-- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `funcionarios`
@@ -55,12 +59,10 @@ INSERT INTO `funcionarios` (`id_funcionario`, `nome`, `sobrenome`, `email`, `sen
 (2, 'a', 'a', 'a', 's', 'w', 'e'),
 (3, 'a', 'a', 'a', 's', 'w', 'e'),
 (4, 'a', 'a', 'a', 's', 'w', 'e'),
-(5, 'a', '', '', '', '', ''),
 (6, '', '', '', '', '', ''),
 (7, 'e', 'e', 'e', 'r', 'q', '3'),
 (8, '', '', '', 'aaa', '', ''),
-(9, 'QUALITY', 'LOCACAO E PRESTACAO DE SERVICO', '', '', '', 'wwwwwwwwq'),
-(10, '', '', '', '', '', 'qqq');
+(9, 'QUALITY', 'LOCACAO E PRESTACAO DE SERVICO', '', '', '', 'wwwwwwwwq');
 
 -- --------------------------------------------------------
 
@@ -70,17 +72,31 @@ INSERT INTO `funcionarios` (`id_funcionario`, `nome`, `sobrenome`, `email`, `sen
 
 CREATE TABLE `usuarios` (
   `id_usuario` int(3) NOT NULL,
-  `nome` int(11) NOT NULL,
-  `sobrenome` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
-  `senha` int(11) NOT NULL,
-  `telefone` int(11) NOT NULL,
-  `cargo` int(11) NOT NULL
+  `nome` varchar(20) NOT NULL,
+  `sobrenome` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `senha` varchar(15) NOT NULL,
+  `telefone` varchar(11) NOT NULL,
+  `cargo` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `nome`, `sobrenome`, `email`, `senha`, `telefone`, `cargo`) VALUES
+(1, '0', '0', '0', '0', '0', '0'),
+(4, 'admin@admin', 'tes', 'admin@admin', 't', 'tes', 'tes');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `erros`
+--
+ALTER TABLE `erros`
+  ADD PRIMARY KEY (`id_erro`);
 
 --
 -- Índices para tabela `funcionarios`
@@ -99,10 +115,22 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de tabela `erros`
+--
+ALTER TABLE `erros`
+  MODIFY `id_erro` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  MODIFY `id_funcionario` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_funcionario` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
