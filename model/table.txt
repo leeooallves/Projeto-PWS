@@ -1,0 +1,1 @@
+CREATE TABLE `projeto`.`funcionario` (`id` INT(5) NOT NULL , `nome` VARCHAR(20) NOT NULL , `sobrenome` VARCHAR(20) NOT NULL , `email` VARCHAR(25) NOT NULL , `senha` VARCHAR(20) NOT NULL , `telefone` INT(25) NOT NULL , `cargo` VARCHAR(25) NOT NULL , PRIMARY KEY (`id`(5))) ENGINE = InnoDB;
