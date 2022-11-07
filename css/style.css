@@ -1,3 +1,26 @@
+.table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td, .table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table tr:hover {background-color: #ddd;}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: white;
+  color: black;
+}
+
 .faixaAzul{
   width: 100%;
   height: 5px;
@@ -9,85 +32,95 @@
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
 }
 
-.limitesInternos{
-  display: block;
-  max-width: 1200px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
 
-.limitesUsuarios{
+/* Style the topnav links */
+.topnav a {
+  float: left;
   display: block;
-  max-width: 1200px;
-  height: 850px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.limitesfuncionarios{
-  display: block;
-  max-width: 1200px;
-  height: 850px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.titulo {
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #575757;
-  margin: 35px;
-  display: block;
+  color: #f2f2f2;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-header {
-  background-color: #F5F5F5;
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: #ddd;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the footer */
+.footer {
   width: 100%;
-   height: 159px;
+  margin-top: 80px;
+  height: max-content;
 }
 
-nav {
-  float: left;
-  width: 30%;
-  height: 300px;
-  background: #ccc;
-  padding: 20px;
+ui {
+  color: #FFFFFF;
+  display: block;
+  position: relative;
+  font-family: sans-serif;
+  font-size: 24px;
 }
 
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
+li {
+  color: #FFFFFF;
+  display: block;
+  position: relative;
+  font-family: sans-serif;
+  font-size: 16px;
 }
 
-article {
-  float: left;
-  padding: 20px;
-  height: 600px; 
+li:hover {
+  color: #999;
 }
 
-section::after {
-  content: "";
-  display: table;
-  clear: both;
+.footerBoxFundo {
+  background-color: #131e47;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  padding: 40px 0px;
 }
-
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
+.faixaCinzaFooter {
+  position: relative;
+  display: block;
+  width: 350px;
+  height: 2px;
+  background-color: #192453;
+  margin: 7px 0px;
 }
-
+.faixaAzulFooter {
+  position: relative;
+  display: block;
+  width: 475px;
+  height: 4px;
+  background-color: #0568FF;
+  margin: 5px 0px 20px 0px;
+}
 .menu {
   background-color: #FFFFFF;
   width: 100%;
@@ -98,15 +131,6 @@ section::after {
   justify-content: center;
   align-items: center;
 }
-
-.conteudo{
-  position: relative;
-  width:90%;
-  table-layout: fixed;
-  margin: 20px;
-  margin-left: 65px;
-}
-
 
 .itemMenu{
   background-color: #FFFFFF;
@@ -134,170 +158,17 @@ section::after {
   color: #FFFFFF;
 }
 
-
-.footer {
-  width: 100%;
-  margin-top: 80px;
-  height: max-content;
-}
-
-.footerBoxFundo {
-  background-color: #131e47;
-  position: relative;
-  width: 100%;
-  height: min-content;
-  padding: 40px 0px;
-}
-
-ui {
-  color: #FFFFFF;
-  display: block;
-  position: relative;
-  font-family: sans-serif;
-  font-size: 24px;
-}
-
-li {
-  color: #FFFFFF;
-  display: block;
-  position: relative;
-  font-family: sans-serif;
-  font-size: 16px;
-}
-
-li:hover {
-  color: #999;
-}
-
-.faixaCinzaFooter {
-  position: relative;
-  display: block;
-  width: 350px;
-  height: 2px;
-  background-color: #192453;
-  margin: 7px 0px;
-}
-
-.faixaAzulFooter {
-  position: relative;
-  display: block;
-  width: 475px;
-  height: 4px;
-  background-color: #0568FF;
-  margin: 5px 0px 20px 0px;
-}
-
-.rodape {
-  font-family: sans-serif;
-  font-size: 14px;
-  margin: 20px 0px 20px 20px;
+.titulo {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
   color: #575757;
-}
-
-.rodape:hover {
-  color: #999;
-}
-
-.boxLogin {
-  border-radius: 10px;
-  width: 700px;
-  height: 400px;
+  margin: 35px;
   display: block;
-  background-color: #0568FF;
-  border: 0px;
-}
-
-.boxCadastro{
-  border-radius: 10px;
-  width: 700px;
-  height: 800px;
-  display: block;
-  background-color: #0568FF;
-  border: 0px;
-}
-
-.boxLoginInput {
-  display: block;
-  width: 630px;
-  height: 42px;
-  padding: 10px;
-  border-radius: 6px;
-  border-color: #32ADFC;
-  margin: 5px 0px 33px 20px;
-}
-
-.boxLoginLabel {
-  display: block;
-  color: #FFFFFF;
-  padding-left: 20px;
-  font-size: 20px;
-}
-
-
-.faixaBrancaBoxLogin{
-  position: relative;
-  display: block;
-  width: 625px;
-  height: 1px;
-  background-color: #FFFFFF;
-  margin: -14px 0px 33px 20px;
-}
-
-.subAviso {
-  position: relative;
-  margin: -18px 0px 22px 0px;
-  font-size: 14px;
-}
-
-.botao {
-  height: 42px;
-  width: 200px;
-  color: #FFFFFF;
-  background-color: #32ADFC;
-  border: 0px;
-  border-radius: 8px;
-  display: block;
-  font-family: Arial Black;
-  position: relative;
-  left: 20px;
-}
-
-.botaoLogin:hover {
-  background-color: #229DED;
-  cursor: pointer;
-}
-
-.erroLogin {
-  width: 350px;
-  height: 88px;
-  background-color: #FF5555;
-  color: #FFFFFF;
   text-align: center;
-  display: block;
-  position: relative;
-  border-radius: 8px;
-  padding: 16px;
-  margin-left: 175px;
 }
 
-
-
-.botaoLogout {
-  height: 42px;
-  width: 200px;
-  color: #FFFFFF;
-  background-color: #FF5555;
-  border-radius: 8px;
-  display: block;
-  font-family: Arial Black;
-  position: relative;
-  left: 20px;
-  text-decoration: none;
-  text-align: center;
-  padding: 10px;
-}
-
-.botaoLogout:hover {
-  background-color: #FF0000;
-  cursor: pointer;
+header {
+  background-color: #F5F5F5;
+  width: 100%;
+   height: 159px;
 }

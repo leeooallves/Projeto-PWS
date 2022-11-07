@@ -3,9 +3,9 @@
         <article style="left: 50%; position: relative; margin-left: -350px;">
 
             <p>
-            <form method="POST" action="/UTFPR/Projeto/projeto22/model/cadastrarFuncionarioDB.php">
+            <form action="\PROJETO-PWS\banco\cadastrarPDO.php" method ="POST">
                 <fieldset id="funcionario" class="boxCadastro">
-                    <p class="boxLoginLabel">Novo Funcionário</p>
+                    <p class="boxLoginLabel">Cadastrar Funcionário</p>
                     <div class="faixaBrancaBoxLogin"></div>
                     <label class="boxLoginLabel" for="cNome">Nome:</label>
                     <input class="boxLoginInput" type="text" name="cNome" id="cNome" size="20" maxlength="30" placeholder="Nome">
